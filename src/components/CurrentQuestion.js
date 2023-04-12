@@ -11,6 +11,14 @@ export const CurrentQuestion = () => {
   return (
     <div>
       <h1>Question: {question.questionText}</h1>
+      {question.options.map((option) => {
+        return (
+          <button
+            type="button">
+            {option}
+          </button>
+        )
+      })}
     </div>
   )
 }
