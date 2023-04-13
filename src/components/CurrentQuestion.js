@@ -9,19 +9,26 @@ export const CurrentQuestion = () => {
   if (!question) {
     return <h1>Oh no! I could not find the current question!</h1>
   }
-  const onButtonClick = () => {
-    dispatch(quiz.actions.submitAnswer());
-    dispatch(quiz.actions.goToNextQuestion());
+  const displayNextQuestion = () => {
+    dispatch(quiz.actions.goToNextQuestion())
   }
+  const onAnswerSubmit = (questionId, answerIndex) => {
+    dispatch(quiz.actions.submitAnswer({ questionId, answerIndex }));
+    if (question.correctAnswerIndex === answerIndex) {
+      setTimeout(displayNextQuestion, 200);
+    } else {
+      setTimeout(displayNextQuestion, 200);
+    }
+  };
 
   return (
     <div>
       <img src={question.questionImg} alt="" />
-      {question.options.map((option) => {
+      {question.options.map((option, index) => {
         return (
           <button
             type="button"
-            onClick={onButtonClick}>
+            onClick={() => onAnswerSubmit(question.id, index)}>
             {option}
           </button>
         )
