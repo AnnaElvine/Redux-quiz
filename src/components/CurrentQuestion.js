@@ -20,6 +20,14 @@ export const CurrentQuestion = () => {
       setTimeout(displayNextQuestion, 200);
     }
   };
+  // Jag försökte göra så att man ser om svaret är rätt
+  // const isCorrect = (answerIndex) => {
+  //   if (answerIndex === true) {
+  //     return <p>Correct</p>
+  //   } else {
+  //     return <p>Wrong</p>
+  //   }
+  // }
 
   return (
     <div>
