@@ -21,8 +21,8 @@ export const CurrentQuestion = () => {
     }
   };
   // Jag försökte göra så att man ser om svaret är rätt
-  // const isCorrect = (answerIndex) => {
-  //   if (answerIndex === true) {
+  // const isCorrect = () => {
+  //   if (isCorrect === true) {
   //     return <p>Correct</p>
   //   } else {
   //     return <p>Wrong</p>
@@ -34,11 +34,14 @@ export const CurrentQuestion = () => {
       <img src={question.questionImg} alt="" />
       {question.options.map((option, index) => {
         return (
-          <button
-            type="button"
-            onClick={() => onAnswerSubmit(question.id, index)}>
-            {option}
-          </button>
+          <>
+            <button
+              type="button"
+              onClick={() => onAnswerSubmit(question.id, index)}>
+              {option}
+            </button>
+            {/* <h1>{isCorrect}</h1> */}
+          </>
         )
       })}
     </div>
