@@ -4,14 +4,21 @@ import Green from '../components/images/Green.png'
 import Orange from '../components/images/Orange.png'
 import Brown from '../components/images/Brown.png'
 import Pink from '../components/images/Pink.png'
+import GreyOne from '../components/images/GreyOne.png'
+import PurpleTwo from '../components/images/PurpleTwo.png'
+import GreenThree from '../components/images/GreenThree.png'
+import OrangeFour from '../components/images/OrangeFour.png'
+import BrownFive from '../components/images/BrownFive.png'
+
+
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionImg: `${Purple}`, options: ['RED', 'GREEN', 'PURPLE', 'ORANGE'], correctAnswerIndex: 2 },
-  { id: 2, questionImg: `${Green}`, options: ['PINK', 'GREEN', 'ORANGE', 'BROWN'], correctAnswerIndex: 1 },
-  { id: 3, questionImg: `${Orange}`, options: ['PURPLE', 'ORANGE', 'PINK', 'BROWN'], correctAnswerIndex: 1 },
-  { id: 4, questionImg: `${Brown}`, options: ['ORANGE', 'PURPLE', 'BLACK', 'BROWN'], correctAnswerIndex: 3 },
-  { id: 5, questionImg: `${Pink}`, options: ['PINK', 'BLACK', 'ORANGE', 'GREEN'], correctAnswerIndex: 0 }
+  { id: 1, questionImg: `${Purple}`, options: ['RED', 'GREEN', 'PURPLE', 'ORANGE'], correctAnswerIndex: 2, imgUrl: `${GreyOne}` },
+  { id: 2, questionImg: `${Green}`, options: ['PINK', 'GREEN', 'ORANGE', 'BROWN'], correctAnswerIndex: 1, imgUrl: `${PurpleTwo}` },
+  { id: 3, questionImg: `${Orange}`, options: ['PURPLE', 'ORANGE', 'PINK', 'BROWN'], correctAnswerIndex: 1, imgUrl: `${GreenThree}` },
+  { id: 4, questionImg: `${Brown}`, options: ['ORANGE', 'PURPLE', 'BLACK', 'BROWN'], correctAnswerIndex: 3, imgUrl: `${OrangeFour}` },
+  { id: 5, questionImg: `${Pink}`, options: ['PINK', 'BLACK', 'ORANGE', 'GREEN'], correctAnswerIndex: 0, imgUrl: `${BrownFive}` }
 ]
 
 const initialState = {

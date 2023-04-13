@@ -1,6 +1,6 @@
 import React from 'react';
 import { quiz } from 'reducers/quiz';
-import Confetti from 'react-confetti-explosion';
+/* import Confetti from 'react-confetti-explosion'; */
 import { useSelector, useDispatch } from 'react-redux';
 
 export const Summary = () => {
@@ -9,7 +9,6 @@ export const Summary = () => {
   const dispatch = useDispatch()
   return (
     <>
-      <Confetti />
       You got {correctAnswers} correct answers out of 5
       <button
         type="button"
@@ -19,3 +18,5 @@ export const Summary = () => {
     </>
   )
 }
+
+/* <Confetti /> */
