@@ -6,7 +6,7 @@ import justin from '../components/images/j.jpeg'
 // Change these to your own questions!
 const questions = [
   { id: 1, questionImg: `${runner}`, options: [`${usain}`, `${justin}`, 'Tyson Gay', 'Asafa Powell'], correctAnswerIndex: 0 },
-  { id: 2, questionImg: 'When was Michael Phelps last named male World Swimmer of the Year?', options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2 }
+  { id: 2, questionImg: `${usain}`, options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2 }
 ]
 
 const initialState = {

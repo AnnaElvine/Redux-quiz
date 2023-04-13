@@ -11,7 +11,7 @@ const ImgButton = styled.img`
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
 
-  const dispatch = useDispatch(quiz.actions.submitAnswer);
+  const dispatch = useDispatch();
 
   if (!question) {
     return <h1>Oh no! I could not find the current question!</h1>
