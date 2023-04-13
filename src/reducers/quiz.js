@@ -7,10 +7,10 @@ import Pink from '../components/images/Pink.png'
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionImg: `${Purple}`, options: [`${usain}`, `${justin}`, 'Tyson Gay', 'Asafa Powell'], correctAnswerIndex: 0 },
-  { id: 2, questionImg: `${Green}`, options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2 }
-  { id: 3, questionImg: `${Orange}`, options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 3 }
-  { id: 4, questionImg: `${Brown}`, options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 4 }
+  { id: 1, questionImg: `${Purple}`, options: ['RED', 'GREEN', 'PURPLE', 'ORANGE'], correctAnswerIndex: 0 },
+  { id: 2, questionImg: `${Green}`, options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2 },
+  { id: 3, questionImg: `${Orange}`, options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 3 },
+  { id: 4, questionImg: `${Brown}`, options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 4 },
   { id: 5, questionImg: `${Pink}`, options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 5 }
 ]
 
