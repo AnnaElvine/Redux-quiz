@@ -40,7 +40,7 @@ export const Summary = () => {
     <>
       <Confetti />
       <SummaryContainer>
-        <RainbowImage src="./images/PinkSix.png" alt=""/>
+        <RainbowImage src="./images/PinkSix.png" alt="" />
         <SummaryText>
           <h1>You got {correctAnswers} correct answers out of 5</h1>
         </SummaryText>

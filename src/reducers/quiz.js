@@ -10,8 +10,6 @@ import GreenThree from '../components/images/GreenThree.png'
 import OrangeFour from '../components/images/OrangeFour.png'
 import BrownFive from '../components/images/BrownFive.png'
 
-
-
 // Change these to your own questions!
 const questions = [
   { id: 1, questionImg: `${Purple}`, options: ['RED', 'GREEN', 'PURPLE', 'ORANGE'], correctAnswerIndex: 2, imgUrl: `${GreyOne}` },

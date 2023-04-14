@@ -11,7 +11,6 @@ background: white;
 border-radius: 20px;
 margin: 35px;
 `
-
 const QuestionImg = styled.img`
 display: flex;
 justify-content: center;
@@ -26,7 +25,6 @@ align-self: center;
 height: 100%;
 width: 200px;
 `
-
 const Buttons = styled.div`
 display: grid;
 justify-content: center;
@@ -36,7 +34,7 @@ gap: 15px;
 margin-left: 10px;
 padding-bottom: 40px;
 `
-const Button = styled.button`
+export const Button = styled.button`
 background-color: pink;
 font-size: 15px;
 width: 150px;
@@ -87,7 +85,7 @@ export const CurrentQuestion = () => {
 
   return (
     <QuestionContainer>
-      <Rainbow src={question.imgUrl} alt=""/>
+      <Rainbow src={question.imgUrl} alt="" />
       <QuestionImg src={question.questionImg} alt="" />
       <Buttons>
         {question.options.map((option, index) => {
