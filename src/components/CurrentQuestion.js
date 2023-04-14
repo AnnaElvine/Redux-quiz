@@ -2,7 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
 import { quiz } from 'reducers/quiz'
+import Confetti from 'react-confetti-explosion';
+/* import ConfettiExplosion from 'react-confetti-explosion'; */
 import { Summary } from './Summary'
+import { ProgressBar } from './ProgressBar';
 
 const QuestionContainer = styled.div`
 display: flex;
@@ -77,6 +80,21 @@ export const CurrentQuestion = () => {
     }
   };
 
+  /* const borderAnswer = (index) => {
+    if (correctAnswerIndex) {
+      if (currentanswer.answerIndex === index) {
+        if (currentanswer.isCorrect) {
+          return {
+            border: '6px solid #63A241'
+          };
+        }
+        return { border: '6px solid #F64E66' };
+      }
+      return {};
+    }
+    return {};
+  }; */
+
   return (
     <QuestionContainer>
       <Rainbow src={question.imgUrl} alt="" />
@@ -86,12 +104,13 @@ export const CurrentQuestion = () => {
           return (
             <Button
               type="button"
-              onClick={() => onAnswerSubmit(question.id, index)}
+              onClick={() => onAnswerSubmit(question.id, index, Confetti)}
               key={option}
               style={{ backgroundColor: option.toLowerCase() }} />
           )
         })}
       </Buttons>
+      <ProgressBar />
     </QuestionContainer>
   )
 }
