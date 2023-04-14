@@ -2,7 +2,6 @@
 /* eslint-disable no-tabs */
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { keyframes } from 'styled-components';
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -29,28 +28,6 @@ const StyledParagraph = styled.p`
   text-align: center;
   cursor: default;
 `
-const balanceAnimation = keyframes`
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  30%, 60% {
-    transform: rotate(-45deg);
-  }
-`;
-
-const shrinkJumpAnimation = keyframes`
-  10%, 35% {
-    transform: scale(2, .2) translate(0, 0);
-  }
-
-  45%, 50% {
-    transform: scale(1) translate(0, -150px);
-  }
-
-  80% {
-    transform: scale(1) translate(0, 0);
-  }
-`;
 const StyledSpan = styled.span`
   color: purple;
   font-weight: bold;
@@ -58,21 +35,7 @@ const StyledSpan = styled.span`
   &:hover {
     color: green;
   }
-  .word span {
-    display: inline-block;
-    font-size: 100px;
-    line-height: 0.8;
-  }
-  .word span:nth-child(1).active {
-    animation: ${balanceAnimation} 1.5s ease-out;
-    transform-origin: bottom left;
-  }
-  .word span:nth-child(2).active {
-    animation: ${shrinkJumpAnimation} 1s ease-in-out;
-    transform-origin: bottom center;
-  }
   `
-
 const StartContainer = styled.div`
 display: flex;
 flex-direction: column;
@@ -99,22 +62,7 @@ export const Start = () => {
   return (
     <StartContainer>
       <StyledParagraph>
-        Nu ska vi blanda lite
-        <StyledSpan>
-          <div className="word">
-            <span className="active">f</span>
-            <span className="word">
-              <span className="active">ä</span>
-            </span>
-            <span className="word">
-              <span className="active">r</span>
-            </span>
-            <span className="word">
-              <span className="active">g</span>
-            </span>
-          </div>
-        </StyledSpan>
-         gissa vad det blir...
+        Nu ska vi blanda lite <StyledSpan>färg </StyledSpan>gissa vad det blir...
       </StyledParagraph>
       <Sun>
         <div className="sun" />
