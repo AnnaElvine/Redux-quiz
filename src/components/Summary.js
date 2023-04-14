@@ -3,6 +3,7 @@ import { quiz } from 'reducers/quiz';
 import styled from 'styled-components';
 import Confetti from 'react-confetti-explosion';
 import { useSelector, useDispatch } from 'react-redux';
+import Rainbow from './images/PinkSix.png'
 
 const SummaryContainer = styled.div`
 display: flex;
@@ -15,7 +16,6 @@ margin: 35px;
 
 const RainbowImage = styled.img`
 width: 100%;
-height: 100px;
 `
 const SummaryText = styled.h1`
 font-size: 18px;
@@ -50,7 +50,7 @@ export const Summary = () => {
     <>
       <Confetti />
       <SummaryContainer>
-        <RainbowImage src="./images/PinkSix.png" alt="" />
+        <RainbowImage src={Rainbow} alt="" />
         <SummaryText>
           <h1>You got {correctAnswers} correct answers out of 5</h1>
         </SummaryText>

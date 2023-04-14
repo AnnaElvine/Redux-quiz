@@ -55,7 +55,6 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
-  const currentAnswer = useSelector((state) => state.quiz.answers[state.quiz.currentQuestionIndex])
   const over = useSelector((state) => state.quiz.quizOver)
   const dispatch = useDispatch();
 
@@ -76,19 +75,6 @@ export const CurrentQuestion = () => {
     } else {
       setTimeout(displayNextQuestion, 500);
     }
-  };
-
-  const isCorrect = (index) => {
-    if (currentAnswer) {
-      if (currentAnswer.answerIndex === index) {
-        if (currentAnswer.isCorrect) {
-          return { border: 'solid 2px green' };
-        }
-        return { border: 'solid 2px red' };
-      }
-      return {};
-    }
-    return {};
   };
 
   return (
