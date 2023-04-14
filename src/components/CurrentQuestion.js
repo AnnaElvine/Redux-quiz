@@ -38,10 +38,10 @@ padding-bottom: 40px;
 export const Button = styled.button`
 background-color: pink;
 font-size: 15px;
-width: 150px;
-height: 40px;
+width: 100px;
+height: 100px;
 border-style: none;
-border-radius: 15px; 
+border-radius: 100px; 
 justify-self: center;
 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -82,11 +82,9 @@ export const CurrentQuestion = () => {
     if (currentAnswer) {
       if (currentAnswer.answerIndex === index) {
         if (currentAnswer.isCorrect) {
-          return {
-            background: '#63A241'
-          };
+          return { border: 'solid 2px green' };
         }
-        return { background: '#F64E66' };
+        return { border: 'solid 2px red' };
       }
       return {};
     }
@@ -100,16 +98,11 @@ export const CurrentQuestion = () => {
       <Buttons>
         {question.options.map((option, index) => {
           return (
-            <>
-              <Button
-                type="button"
-                onClick={() => onAnswerSubmit(question.id, index)}
-                key={option}
-                style={isCorrect(index)}>
-                {option}
-              </Button>
-              {/* <h1>{isCorrect}</h1> */}
-            </>
+            <Button
+              type="button"
+              onClick={() => onAnswerSubmit(question.id, index)}
+              key={option}
+              style={{ backgroundColor: option.toLowerCase() }} />
           )
         })}
       </Buttons>
