@@ -34,6 +34,7 @@ gap: 15px;
 margin-left: 10px;
 padding-bottom: 40px;
 `
+
 export const Button = styled.button`
 background-color: pink;
 font-size: 15px;
