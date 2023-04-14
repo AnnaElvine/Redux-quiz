@@ -19,17 +19,27 @@ height: 100px;
 `
 const SummaryText = styled.h1`
 font-size: 18px;
+text-align: center;
 `
 
 const Button = styled.button`
 display: flex;
 align-self: center;
+align-items: center;
+justify-content: center;
 background-color: pink;
 font-size: 15px;
 width: 150px;
 height: 40px;
 border-style: none;
 border-radius: 15px; 
+cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: lightblue;
+    transform: translateY(-7px);
+  }
 `
 
 export const Summary = () => {

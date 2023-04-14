@@ -41,6 +41,15 @@ width: 150px;
 height: 40px;
 border-style: none;
 border-radius: 15px; 
+justify-self: center;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    /* background-color: lightblue; */
+    transform: translateY(-7px);
+  }
 `
 
 export const CurrentQuestion = () => {
