@@ -15,7 +15,7 @@ export const ProgressBar = () => {
     height: 0.5rem;
     width: 25%;
     align-self: center;
-    background-color: lightgrey;
+    background-color: lightblue;
     border-radius: 10px;
     margin-bottom: 0.5rem;
     position: absolute;
@@ -26,10 +26,11 @@ export const ProgressBar = () => {
     display: flex;
     height: 100%;
     width: ${percent}%;
-    background-color: #00a2b7;
+    // background-color: #00a2b7;
+    background-color: yellow;
     border-radius: 10px 0 0 10px;
     align-items: center;
-    font-family: 'Roboto';
+    // font-family: 'Roboto';
     font-weight: bold;
     color: #0078be;
   `;

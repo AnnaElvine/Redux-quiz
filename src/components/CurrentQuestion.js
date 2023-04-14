@@ -10,7 +10,7 @@ import { ProgressBar } from './ProgressBar';
 const QuestionContainer = styled.div`
 display: flex;
 flex-direction: column;
-background: white;
+// background: white;
 border-radius: 20px;
 margin: 35px;
 `
@@ -18,8 +18,9 @@ const QuestionImg = styled.img`
 display: flex;
 justify-content: center;
 align-self: center;
-width: 230px;
+width: 260px;
 height: 100%;
+mix-blend-mode: multiply;
 `
 const Rainbow = styled.img`
 display: flex;
@@ -27,6 +28,7 @@ justify-content: center;
 align-self: center;
 height: 100%;
 width: 200px;
+mix-blend-mode: multiply;
 `
 const Buttons = styled.div`
 display: grid;
@@ -56,7 +58,7 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
 `
 
-export const CurrentQuestion = () => {
+export const CurrentQuestion = (/*{ wasCorrectAnswerSelected }*/) => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
   const over = useSelector((state) => state.quiz.quizOver)
   const dispatch = useDispatch();
@@ -74,14 +76,19 @@ export const CurrentQuestion = () => {
   const onAnswerSubmit = (questionId, answerIndex) => {
     dispatch(quiz.actions.submitAnswer({ questionId, answerIndex }));
     if (question.correctAnswerIndex === answerIndex) {
-      setTimeout(displayNextQuestion, 500);
+      /*alert('Yes, ... and ... turns into ..')*/
+      /*document.getElementById(`${answerIndex}`).style.background = 'green'*/
+      setTimeout(displayNextQuestion, 1000);
     } else {
-      setTimeout(displayNextQuestion, 500);
+      /*document.getElementById(`${answerIndex}`).style.background = 'red'*/
+      setTimeout(displayNextQuestion, 1000);
+      /*alert('Almost right! .. and .. turns into ...')*/
     }
   };
 
-  /* const borderAnswer = (index) => {
-    if (correctAnswerIndex) {
+  
+  /* const answerBorderBtn = (index) => {
+    if (currentanswer) {
       if (currentanswer.answerIndex === index) {
         if (currentanswer.isCorrect) {
           return {
@@ -103,9 +110,13 @@ export const CurrentQuestion = () => {
         {question.options.map((option, index) => {
           return (
             <Button
+              /*isCorrect={wasCorrectAnswerSelected}*/
               type="button"
               onClick={() => onAnswerSubmit(question.id, index, Confetti)}
+              /* className={answer ? 'disabled-true' : 'disabled-false'}
+              id={index}
               key={option}
+              disabled={answer}*/
               style={{ backgroundColor: option.toLowerCase() }} />
           )
         })}

@@ -14,8 +14,12 @@ code {
 
 body {
   /* background-image: url(https://img.freepik.com/free-vector/watercolor-background_220290-47.jpg?w=900&t=st=1681429942~exp=1681430542~hmac=5a66ebcff0da224203cea671336b2627a993bf1efbc71aa5dadabc4c6c2d8650); */
-  background-image: url(https://cdn.mos.cms.futurecdn.net/NxJwRW8eUBSW4YwgJy6XpG-970-80.jpg.webp);
+  /* background-image: url(https://cdn.mos.cms.futurecdn.net/NxJwRW8eUBSW4YwgJy6XpG-970-80.jpg.webp); */
+  /* background-image: url(https://d3rf6j5nx5r04a.cloudfront.net/9UEQwmLuYn86NR12z6lEk1yqdDY=/560x0/product/3/e/17b0589a598342a2a84868648302af7c_opt.jpg); */
+  background-image: url(https://a.1stdibscdn.com/a_10991/a_64072021593769268926/SW04_2020_Seascape_Schuring_Rainbow_in_Morning_Light_master.jpg?disable=upscale&auto=webp&quality=60&width=1318);
   background-repeat:no-repeat;
   background-size:cover;
   background-attachment: fixed;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');

@@ -1,35 +1,40 @@
 import React from 'react';
 import { quiz } from 'reducers/quiz';
 import styled from 'styled-components';
-import Confetti from 'react-confetti-explosion';
+// import Confetti from 'react-confetti-explosion';
+import Confetti from 'react-confetti';
 import { useSelector, useDispatch } from 'react-redux';
-import Rainbow from './images/PinkSix.png'
+import Rainbow from './images/PinkSix.png';
 
 const SummaryContainer = styled.div`
 display: flex;
 flex-direction: column;
-background: white;
+// background: white;
 height: 500px;
 border-radius: 20px;
 margin: 35px;
 `
-
 const RainbowImage = styled.img`
-width: 25%;
+width: 45%;
 align-self: center;
+mix-blend-mode: multiply;
 `
 const SummaryText = styled.h1`
-font-size: 18px;
+font-size: 25px;
+font-family: 'Rubik Wet Paint', cursive;
+color: lightblue;
 text-align: center;
+font-weight: bold;
 `
-
 const Button = styled.button`
 display: flex;
 align-self: center;
 align-items: center;
 justify-content: center;
-background-color: pink;
+background-color: yellow;
 font-size: 15px;
+font-family: 'Helvetica', sans-serif;
+font-weight: bold;
 width: 150px;
 height: 40px;
 border-style: none;
@@ -42,7 +47,6 @@ cursor: pointer;
     transform: translateY(-7px);
   }
 `
-
 export const Summary = () => {
   const answers = useSelector((state) => state.quiz.answers);
   const correctAnswers = answers.filter((answer) => answer.isCorrect).length;
@@ -53,12 +57,12 @@ export const Summary = () => {
       <SummaryContainer>
         <RainbowImage src={Rainbow} alt="" />
         <SummaryText>
-          <h1>You got {correctAnswers} correct answers out of 5</h1>
+          <h1>YAY! YOU GOT {correctAnswers} COLOURS OUT OF 5 JUST RIGHT!</h1>
         </SummaryText>
         <Button
           type="button"
           onClick={() => dispatch(quiz.actions.restart())}>
-        Restart
+        RESTART
         </Button>
       </SummaryContainer>
     </>
