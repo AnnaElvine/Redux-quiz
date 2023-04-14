@@ -15,7 +15,8 @@ margin: 35px;
 `
 
 const RainbowImage = styled.img`
-width: 100%;
+width: 25%;
+align-self: center;
 `
 const SummaryText = styled.h1`
 font-size: 18px;
