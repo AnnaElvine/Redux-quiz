@@ -8,6 +8,8 @@ const QuestionContainer = styled.div`
 display: flex;
 flex-direction: column;
 background: white;
+border-radius: 20px;
+margin: 35px;
 `
 
 const QuestionImg = styled.img`
@@ -22,7 +24,7 @@ display: flex;
 justify-content: center;
 align-self: center;
 height: 100%;
-width: 120px;
+width: 200px;
 `
 
 const Buttons = styled.div`
@@ -30,8 +32,9 @@ display: grid;
 justify-content: center;
 align-items: center;
 grid-template-columns: 2fr 2fr;
-margin-left: 30px;
-gap: 20px;
+gap: 15px;
+margin-left: 10px;
+padding-bottom: 40px;
 `
 const Button = styled.button`
 background-color: pink;

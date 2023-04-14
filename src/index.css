@@ -12,3 +12,9 @@ code {
     monospace;
 }
 
+body {
+  background-image: url(https://img.freepik.com/free-vector/watercolor-background_220290-47.jpg?w=900&t=st=1681429942~exp=1681430542~hmac=5a66ebcff0da224203cea671336b2627a993bf1efbc71aa5dadabc4c6c2d8650);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
