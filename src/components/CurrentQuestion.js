@@ -56,11 +56,15 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     /* background-color: lightblue; */
     transform: translateY(-7px);
   }
+
+  border: solid 8px ${(props) => props.border};
 `
 
-export const CurrentQuestion = (/*{ wasCorrectAnswerSelected }*/) => {
+export const CurrentQuestion = (/* { wasCorrectAnswerSelected } */) => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
   const over = useSelector((state) => state.quiz.quizOver)
+  const answersArray = useSelector((state) => state.quiz.answers);
+  const currentQuestionIndex = useSelector((state) => state.quiz.currentQuestionIndex);
   const dispatch = useDispatch();
 
   if (over) {
@@ -76,31 +80,24 @@ export const CurrentQuestion = (/*{ wasCorrectAnswerSelected }*/) => {
   const onAnswerSubmit = (questionId, answerIndex) => {
     dispatch(quiz.actions.submitAnswer({ questionId, answerIndex }));
     if (question.correctAnswerIndex === answerIndex) {
-      /*alert('Yes, ... and ... turns into ..')*/
-      /*document.getElementById(`${answerIndex}`).style.background = 'green'*/
+      // alert('Yes, ... and ... turns into ..')
       setTimeout(displayNextQuestion, 1000);
     } else {
-      /*document.getElementById(`${answerIndex}`).style.background = 'red'*/
       setTimeout(displayNextQuestion, 1000);
-      /*alert('Almost right! .. and .. turns into ...')*/
+      // alert('Almost right! .. and .. turns into ...')
     }
   };
 
-  
-  /* const answerBorderBtn = (index) => {
-    if (currentanswer) {
-      if (currentanswer.answerIndex === index) {
-        if (currentanswer.isCorrect) {
-          return {
-            border: '6px solid #63A241'
-          };
-        }
-        return { border: '6px solid #F64E66' };
+  const changeBorderColor = (indexOption) => {
+    if (answersArray.length === currentQuestionIndex) {
+      return 'none';
+    } else {
+      if (question.correctAnswerIndex === indexOption) {
+        return 'white';
       }
-      return {};
+      return 'black';
     }
-    return {};
-  }; */
+  };
 
   return (
     <QuestionContainer>
@@ -110,14 +107,12 @@ export const CurrentQuestion = (/*{ wasCorrectAnswerSelected }*/) => {
         {question.options.map((option, index) => {
           return (
             <Button
-              /*isCorrect={wasCorrectAnswerSelected}*/
               type="button"
               onClick={() => onAnswerSubmit(question.id, index, Confetti)}
-              /* className={answer ? 'disabled-true' : 'disabled-false'}
               id={index}
               key={option}
-              disabled={answer}*/
-              style={{ backgroundColor: option.toLowerCase() }} />
+              style={{ backgroundColor: option.toLowerCase() }}
+              border={changeBorderColor(index)} />
           )
         })}
       </Buttons>

@@ -2,7 +2,7 @@ import React from 'react';
 import { quiz } from 'reducers/quiz';
 import styled from 'styled-components';
 // import Confetti from 'react-confetti-explosion';
-import Confetti from 'react-confetti';
+// import Confetti from 'react-confetti';
 import { useSelector, useDispatch } from 'react-redux';
 import Rainbow from './images/PinkSix.png';
 
@@ -36,7 +36,7 @@ font-size: 15px;
 font-family: 'Helvetica', sans-serif;
 font-weight: bold;
 width: 150px;
-height: 40px;
+height: 100px;
 border-style: none;
 border-radius: 15px; 
 cursor: pointer;
@@ -53,7 +53,7 @@ export const Summary = () => {
   const dispatch = useDispatch()
   return (
     <>
-      <Confetti />
+      {/* <Confetti /> */}
       <SummaryContainer>
         <RainbowImage src={Rainbow} alt="" />
         <SummaryText>
