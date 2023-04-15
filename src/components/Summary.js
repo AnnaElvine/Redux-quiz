@@ -14,12 +14,13 @@ border-radius: 20px;
 margin: 35px;
 `
 const RainbowImage = styled.img`
-width: 80%;
+height: 200px;
+width: 200px;
 align-self: center;
 mix-blend-mode: multiply;
 `
 const SummaryText = styled.h1`
-font-size: 25px;
+font-size: 20px;
 margin-bottom: 2%;
 font-family: 'Rubik Wet Paint', cursive;
 color: pink;
