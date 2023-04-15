@@ -14,7 +14,7 @@ border-radius: 20px;
 margin: 35px;
 `
 const RainbowImage = styled.img`
-width: 45%;
+width: 80%;
 align-self: center;
 mix-blend-mode: multiply;
 `
@@ -22,7 +22,7 @@ const SummaryText = styled.h1`
 font-size: 25px;
 margin-bottom: 2%;
 font-family: 'Rubik Wet Paint', cursive;
-color: lightblue;
+color: pink;
 text-align: center;
 `
 const Button = styled.button`
@@ -35,7 +35,7 @@ font-size: 15px;
 font-family: 'Helvetica', sans-serif;
 font-weight: bold;
 width: 150px;
-padding: 2% 0;
+padding: 10px 0;
 border-style: none;
 border-radius: 30px; 
 cursor: pointer;
