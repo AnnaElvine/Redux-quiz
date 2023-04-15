@@ -21,8 +21,8 @@ export const App = () => {
           <Route path="/" element={<Start />} />
           <Route path="/quiz" element={<CurrentQuestion />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
+      <Footer />
     </Provider>
   );
 }

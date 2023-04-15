@@ -19,7 +19,7 @@ export const ProgressBar = () => {
     border-radius: 10px;
     margin-bottom: 0.5rem;
     position: absolute;
-    top: 228px;
+    top: 200px;
   `
   /* inside the bar */
   const StyledBar = styled.div`

@@ -18,7 +18,7 @@ const QuestionImg = styled.img`
 display: flex;
 justify-content: center;
 align-self: center;
-width: 360px;
+width: 260px;
 height: 100%;
 `
 const Rainbow = styled.img`
@@ -27,6 +27,7 @@ justify-content: center;
 align-self: center;
 height: 100%;
 width: 200px;
+margin-top: -20px;
 `
 const Buttons = styled.div`
 display: flex;
