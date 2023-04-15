@@ -9,7 +9,6 @@ import Rainbow from './images/PinkSix.png';
 const SummaryContainer = styled.div`
 display: flex;
 flex-direction: column;
-// background: white;
 height: 500px;
 border-radius: 20px;
 margin: 35px;
@@ -21,10 +20,10 @@ mix-blend-mode: multiply;
 `
 const SummaryText = styled.h1`
 font-size: 25px;
+margin-bottom: 2%;
 font-family: 'Rubik Wet Paint', cursive;
 color: lightblue;
 text-align: center;
-font-weight: bold;
 `
 const Button = styled.button`
 display: flex;
@@ -36,9 +35,9 @@ font-size: 15px;
 font-family: 'Helvetica', sans-serif;
 font-weight: bold;
 width: 150px;
-height: 100px;
+padding: 2% 0;
 border-style: none;
-border-radius: 15px; 
+border-radius: 30px; 
 cursor: pointer;
   outline: none;
   transition: all 0.3s ease 0s;

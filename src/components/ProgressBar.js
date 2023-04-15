@@ -12,8 +12,8 @@ export const ProgressBar = () => {
 
   /* the bar container */
   const StyledContainer = styled.div`
-    height: 0.5rem;
-    width: 25%;
+    height: 1rem;
+    width: 40%;
     align-self: center;
     background-color: lightblue;
     border-radius: 10px;

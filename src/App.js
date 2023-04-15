@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { quiz } from 'reducers/quiz';
 import { CurrentQuestion } from 'components/CurrentQuestion';
 import { Start } from 'components/Start';
+import { Footer } from 'components/Footer';
 
 const reducer = combineReducers({
   quiz: quiz.reducer
@@ -20,6 +21,7 @@ export const App = () => {
           <Route path="/" element={<Start />} />
           <Route path="/quiz" element={<CurrentQuestion />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </Provider>
   );

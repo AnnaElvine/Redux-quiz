@@ -18,9 +18,8 @@ const QuestionImg = styled.img`
 display: flex;
 justify-content: center;
 align-self: center;
-width: 260px;
+width: 360px;
 height: 100%;
-mix-blend-mode: multiply;
 `
 const Rainbow = styled.img`
 display: flex;
@@ -28,13 +27,13 @@ justify-content: center;
 align-self: center;
 height: 100%;
 width: 200px;
-mix-blend-mode: multiply;
 `
 const Buttons = styled.div`
-display: grid;
+display: flex;
+flex-direction: row;
 justify-content: center;
 align-items: center;
-grid-template-columns: 2fr 2fr;
+grid-template-columns: 1fr 1fr;
 gap: 15px;
 margin-left: 10px;
 padding-bottom: 40px;
