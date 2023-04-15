@@ -17,6 +17,8 @@ const RainbowImage = styled.img`
 height: 200px;
 width: 200px;
 align-self: center;
+margin-top: -20px;
+margin-bottom: -10px;
 mix-blend-mode: multiply;
 `
 const SummaryText = styled.h1`
