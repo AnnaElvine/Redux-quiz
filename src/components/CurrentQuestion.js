@@ -37,7 +37,6 @@ align-items: center;
 grid-template-columns: 1fr 1fr;
 gap: 15px;
 margin-left: 10px;
-padding-bottom: 40px;
 `
 
 export const Button = styled.button`
@@ -47,6 +46,7 @@ width: 100px;
 height: 100px;
 border-style: none;
 border-radius: 100px; 
+margin-bottom: -15px;
 justify-self: center;
 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -58,6 +58,11 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
 
   border: solid 8px ${(props) => props.border};
+
+  @media (max-width: 768px) {
+    width: 65px;
+    height: 65px;
+  }
 `
 
 export const CurrentQuestion = (/* { wasCorrectAnswerSelected } */) => {
