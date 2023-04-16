@@ -28,8 +28,8 @@ const Button = styled.button`
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
-  width: 220px;
-  height: 220px;
+  width: 230px;
+  height: 230px;
   border-style: none;
   border-radius: 100%;
   // justify-self: center;
