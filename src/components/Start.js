@@ -28,8 +28,8 @@ const Button = styled.button`
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-style: none;
   border-radius: 100%;
   // justify-self: center;
@@ -37,7 +37,7 @@ const Button = styled.button`
   background-image: linear-gradient( 160deg, yellow );
   cursor: pointer;
   box-shadow:
-    0 0 60px 30px yellow,  /* inner */
+   0 0 60px 30px yellow,  /* inner */
     0 0 100px 60px yellow, /* middle */
     0 0 140px 90px yellow; /* outer */;
     transition: box-shadow 0.6s;
