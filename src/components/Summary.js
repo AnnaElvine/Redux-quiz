@@ -30,7 +30,7 @@ font-size: 18px;
 font-family: 'Archivo Black', sans-serif;
 color: pink;
 text-align: center;
-text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+text-shadow: 4px 4px 4px lightgrey;
 margin-bottom: 20px;
 
 @media only screen and (min-width: 769px) {
