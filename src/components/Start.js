@@ -24,7 +24,7 @@ import styled from 'styled-components';
 const Button = styled.button`
   background-color: yellow;
   font-family: 'Archivo Black', sans-serif;
-  font-size: 60px;
+  font-size: 38px;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
