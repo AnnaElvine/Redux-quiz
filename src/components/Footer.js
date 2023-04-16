@@ -10,11 +10,12 @@ const FooterWrapper = styled.footer`
   width: 100%;
   gap: 30px;
   opacity: 30%;
+  position: absolute;
+  bottom: -100px;
 `;
 const Name = styled.p`
   font-family: 'Archivo Black', sans-serif;
   font-size: 11px;
-  margin-bottom: 0;
   color: black;
   opacity: 50%;
 `;

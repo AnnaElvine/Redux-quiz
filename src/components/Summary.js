@@ -9,25 +9,31 @@ import Rainbow from './images/PinkSix.png';
 const SummaryContainer = styled.div`
 display: flex;
 flex-direction: column;
+justify-items: center;
+align-items: center;
 height: 500px;
 border-radius: 20px;
 margin: 35px;
+position: relative;
 `
 const RainbowImage = styled.img`
-height: 200px;
-width: 200px;
+width: 100vw;
 align-self: center;
-margin-top: -20px;
-margin-bottom: -10px;
-mix-blend-mode: multiply;
+position: absolute;
+top: 0;
+
+@media only screen and (min-width: 600px) {
+  width: 40%;
+}
 `
 const SummaryText = styled.h1`
 font-size: 30px;
-margin-bottom: 2%;
 font-family: 'Archivo Black', sans-serif;
 color: pink;
 text-align: center;
-text-shadow: 4px 4px 4px lightgrey;
+text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+position: absolute;
+bottom: 0;
 `
 const Button = styled.button`
 display: flex;
@@ -37,11 +43,12 @@ justify-content: center;
 background-color: yellow;
 font-size: 15px;
 font-family: 'Archivo Black', sans-serif;
-// font-weight: bold;
 width: 150px;
 padding: 10px 0;
 border-style: none;
 border-radius: 30px; 
+position: absolute;
+bottom: 0;
 cursor: pointer;
   outline: none;
   transition: all 0.3s ease 0s;
@@ -62,12 +69,12 @@ export const Summary = () => {
         <SummaryText>
           <h1>YAY! YOU GOT {correctAnswers} COLOURS OUT OF 5 JUST RIGHT!</h1>
         </SummaryText>
-        <Button
-          type="button"
-          onClick={() => dispatch(quiz.actions.restart())}>
-        RESTART
-        </Button>
       </SummaryContainer>
+      <Button
+        type="button"
+        onClick={() => dispatch(quiz.actions.restart())}>
+        RESTART
+      </Button>
     </>
   )
 }
