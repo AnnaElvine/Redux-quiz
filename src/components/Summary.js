@@ -14,26 +14,28 @@ align-items: center;
 height: 500px;
 border-radius: 20px;
 margin: 35px;
-position: relative;
 `
 const RainbowImage = styled.img`
 width: 100vw;
 align-self: center;
-position: absolute;
 top: 0;
+margin-bottom: -65px;
 
 @media only screen and (min-width: 600px) {
   width: 40%;
 }
 `
 const SummaryText = styled.h1`
-font-size: 30px;
+font-size: 18px;
 font-family: 'Archivo Black', sans-serif;
 color: pink;
 text-align: center;
 text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-position: absolute;
-bottom: 0;
+margin-bottom: 20px;
+
+@media only screen and (min-width: 769px) {
+  margin-bottom: 20px;
+}
 `
 const Button = styled.button`
 display: flex;
@@ -47,7 +49,7 @@ width: 150px;
 padding: 10px 0;
 border-style: none;
 border-radius: 30px; 
-position: absolute;
+margin-top: 30px;
 bottom: 0;
 cursor: pointer;
   outline: none;
@@ -55,6 +57,9 @@ cursor: pointer;
   &:hover {
     background-color: lightblue;
     transform: translateY(-7px);
+  }
+  @media only screen and (min-width: 769px) {
+    margin-top: 40px;
   }
 `
 export const Summary = () => {
