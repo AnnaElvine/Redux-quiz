@@ -22,11 +22,12 @@ margin-bottom: -10px;
 mix-blend-mode: multiply;
 `
 const SummaryText = styled.h1`
-font-size: 20px;
+font-size: 30px;
 margin-bottom: 2%;
-font-family: 'Rubik Wet Paint', cursive;
+font-family: 'Archivo Black', sans-serif;
 color: pink;
 text-align: center;
+text-shadow: 4px 4px 4px lightgrey;
 `
 const Button = styled.button`
 display: flex;
@@ -35,8 +36,8 @@ align-items: center;
 justify-content: center;
 background-color: yellow;
 font-size: 15px;
-font-family: 'Helvetica', sans-serif;
-font-weight: bold;
+font-family: 'Archivo Black', sans-serif;
+// font-weight: bold;
 width: 150px;
 padding: 10px 0;
 border-style: none;

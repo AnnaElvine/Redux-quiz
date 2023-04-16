@@ -9,12 +9,14 @@ const FooterWrapper = styled.footer`
   justify-content: center;
   width: 100%;
   gap: 30px;
+  opacity: 30%;
 `;
 const Name = styled.p`
-  font-family: gillsans;
-  font-size: 15px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 11px;
   margin-bottom: 0;
   color: black;
+  opacity: 50%;
 `;
 const GitLink = styled.img`
   width: 30px;

@@ -23,15 +23,17 @@ import styled from 'styled-components';
 
 const Button = styled.button`
   background-color: yellow;
-  font-family: 'Rubik Wet Paint', cursive;
-  font-size: 40px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 60px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  text-align: center;
+  letter-spacing: 1px;
   width: 100px;
   height: 100px;
   border-style: none;
-  border-radius: 50%;
-  justify-self: center;
+  border-radius: 100%;
+  // justify-self: center;
+  alignt-items: center;
   background-image: linear-gradient( 160deg, yellow );
   cursor: pointer;
   box-shadow:
@@ -45,7 +47,8 @@ const Button = styled.button`
     transform: translateY(-7px);
     }
   color: lightblue;
-`
+  text-shadow: 4px 4px 4px lightgrey;
+  `
 
 // const StyledParagraph = styled.p`
 //   font-size: 60px;
